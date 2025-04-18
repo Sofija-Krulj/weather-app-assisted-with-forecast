@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-app-revision</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <header>
+        <form class="main-form">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+
+      <main>
+        <div class="flex">
+          <div class="temperature-details">
+            <div>Tuesday 7:59, overcast clouds</div>
+            <div>
+              Humidity: <strong>95%, </strong> Wind: <strong>3.6km/h</strong>
+            </div>
+          </div>
+          <div class="temperature-container">
+            <div class="temperature-icon">
+              <img
+                src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+              />
+            </div>
+
+            <div class="temperature-number">12</div>
+            <div class="temperature-unit">℃</div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        This project was coded by Sofija Krulj, is open-sourced on GitHub and
+        hosted on Netlify
+      </footer>
+    </div>
+  </body>
+</html>
