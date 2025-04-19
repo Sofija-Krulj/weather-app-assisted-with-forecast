@@ -1,7 +1,7 @@
 function searchEngine(event) {
   event.preventDefault();
 
-  let searchInput = document.querySelector("#form-search-input");
+  let searchInput = document.querySelector("#search-form-input");
   let heading = document.querySelector("h1");
   heading.innerHTML = searchInput.value;
 }
