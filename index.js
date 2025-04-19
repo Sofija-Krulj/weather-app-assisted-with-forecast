@@ -7,4 +7,4 @@ function searchEngine(event) {
 }
 
 let form = document.querySelector("#main-form");
-form.addEventListener("click", searchEngine);
+form.addEventListener("submit", searchEngine);
