@@ -2,6 +2,8 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   temperatureElement.innerHTML = Math.round(temperature);
+  let heading = document.querySelector("h1");
+  heading.innerHTML = response.data.city;
 }
 
 function searchCity(city) {
@@ -13,12 +15,11 @@ function searchCity(city) {
 
 function searchEngine(event) {
   event.preventDefault();
-
   let searchInput = document.querySelector("#search-form-input");
-  let heading = document.querySelector("h1");
-  heading.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
 
 let form = document.querySelector("#main-form");
 form.addEventListener("submit", searchEngine);
+
+searchCity("Paris");
