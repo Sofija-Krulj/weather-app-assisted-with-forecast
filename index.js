@@ -4,6 +4,13 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   let heading = document.querySelector("h1");
   heading.innerHTML = response.data.city;
+  let weatherConditionElement = document.querySelector(".weather-condition");
+  weatherConditionElement.innerHTML = response.data.condition.description;
+  let humidityElement = document.querySelector(".humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity} %`;
+
+  let windSpeed = document.querySelector(".wind-speed");
+  windSpeed.innerHTML = `${response.data.wind.speed} km/h`;
 }
 
 function searchCity(city) {
