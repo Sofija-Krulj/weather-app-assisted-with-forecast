@@ -8,9 +8,26 @@ function displayTemperature(response) {
   weatherConditionElement.innerHTML = response.data.condition.description;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+
+  let date = new Date(response.data.time * 1000);
+
+  let time = document.querySelector("#time");
+  time.innerHTML = formatDate(date);
+}
+
+function formatDate(date) {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let day = days[date.getDay()];
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
