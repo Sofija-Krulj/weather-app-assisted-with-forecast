@@ -10,11 +10,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
-
   let date = new Date(response.data.time * 1000);
-
   let time = document.querySelector("#time");
   time.innerHTML = formatDate(date);
+  let icon = document.querySelector("#temperature-icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon"/>`;
 }
 
 function formatDate(date) {
