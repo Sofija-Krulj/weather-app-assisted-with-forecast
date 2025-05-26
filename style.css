@@ -48,7 +48,8 @@ body {
 .temperature-icon {
   width: 66px;
   height: 66px;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-right: -25px;
 }
 
 .temperature-unit {
