@@ -71,7 +71,11 @@ body {
 
   font-weight: 500;
 }
-
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 .weather-forecast-date {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
