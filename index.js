@@ -49,7 +49,7 @@ function searchEngine(event) {
 function forecast(response) {
   let forecastHtml = "";
 
-  response.date.daily.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
@@ -58,9 +58,11 @@ function forecast(response) {
       <div class="weather-forecast-icon">🌤️</div>
       <div class="weather-forecast-temperatures">
         <div class="weather-forecast-temperature">
-          <strong>15º</strong>
+          <strong>${Math.round(day.temperature.maximum)}º</strong>
         </div>
-        <div class="weather-forecast-temperature">9º</div>
+        <div class="weather-forecast-temperature">${Math.round(
+          day.temperature.minimum
+        )}º</div>
       </div>
     </div>
     `;
