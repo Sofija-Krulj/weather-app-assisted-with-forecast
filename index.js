@@ -46,6 +46,13 @@ function searchEngine(event) {
   searchCity(searchInput.value);
 }
 
+function getForecast(city) {
+  let apiKey = `o3cf1124f7350046738b1c34ad3dt312`;
+
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(forecast);
+}
+
 function forecast(response) {
   let forecastHtml = "";
 
