@@ -57,10 +57,11 @@ function getForecast(city) {
 function forecast(response) {
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
     <div class="weather-forecast-day">
       <div class="weather-forecast-date">Tue</div>
       <img src="${day.condition.icon_url}"  class="weather-forecast-icon"/>
@@ -74,6 +75,7 @@ function forecast(response) {
       </div>
     </div>
     `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
