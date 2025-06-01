@@ -46,6 +46,12 @@ function searchEngine(event) {
   let searchInput = document.querySelector("#search-form-input");
   searchCity(searchInput.value);
 }
+function getForecastDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return date[days(getDay)];
+}
 
 function getForecast(city) {
   let apiKey = `o3cf1124f7350046738b1c34ad3dt312`;
