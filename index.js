@@ -49,7 +49,7 @@ function searchEngine(event) {
 function getForecastDate(timestamp) {
   let date = new Date(timestamp * 1000);
 
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return days[date.getDay()];
 }
 
